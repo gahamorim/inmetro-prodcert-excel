@@ -1,0 +1,32 @@
+{
+  "name": "inmetro-prodcert-excel",
+  "version": "1.0.0",
+  "description": "A web-scrapping project to collect all data from Inmetro Prodcert and export it to an Excel Sheet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gahamorim/inmetro-prodcert-excel.git"
+  },
+  "keywords": [
+    "web",
+    "scraping",
+    "puppeteer",
+    "inmetro",
+    "prodcert",
+    "excel",
+    "sheet",
+    "sheets"
+  ],
+  "author": "Gabriel Marcos Cardoso Amorim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gahamorim/inmetro-prodcert-excel/issues"
+  },
+  "homepage": "https://github.com/gahamorim/inmetro-prodcert-excel#readme",
+  "dependencies": {
+    "puppeteer": "^23.10.3"
+  }
+}
