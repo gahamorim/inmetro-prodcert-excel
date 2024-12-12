@@ -8,8 +8,8 @@
   ],
   "routes": [
     {
-      "src": "/api/scrape",
-      "dest": "/api/scrape"
+      "src": "/scrape",
+      "dest": "/scrape"
     }
   ]
 }
