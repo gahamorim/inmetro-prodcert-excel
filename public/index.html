@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inmetro ProdCert</title>
+    <style>
+      /* 1. Use a more-intuitive box-sizing model */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      /* 2. Remove default margin */
+      * {
+        margin: 0;
+      }
+      body {
+        /* 3. Add accessible line-height */
+        line-height: 1.5;
+        /* 4. Improve text rendering */
+        -webkit-font-smoothing: antialiased;
+        font-family: "Lexend", Arial, Helvetica, sans-serif;
+        padding: 10px 15px;
+        background-color: darkgray;
+      }
+      /* 5. Improve media defaults */
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+      /* 6. Inherit fonts for form controls */
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+      /* 7. Avoid text overflows */
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        overflow-wrap: break-word;
+      }
+      /* 8. Improve line wrapping */
+      p {
+        text-wrap: pretty;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-wrap: balance;
+      }
+      /* 9. Create a root stacking context */
+      #root,
+      #__next {
+        isolation: isolate;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Inmetro - Produtos Certificados</h1>
+    <br />
+    <button id="scrapeButton">Listar luminárias</button>
+    <br />
+    <div id="table-wrapper"></div>
+  </body>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+</html>

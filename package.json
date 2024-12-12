@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/gahamorim/inmetro-prodcert-excel#readme",
   "dependencies": {
+    "express": "^4.21.2",
     "puppeteer": "^23.10.3"
   }
 }

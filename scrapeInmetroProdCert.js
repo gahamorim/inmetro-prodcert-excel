@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
-(async () => {
-  const browser = await puppeteer.launch({ headless: true });
+async function scrapeInmetro() {
+  const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   const inmetroProdutosCertificados = "http://www.inmetro.gov.br/prodcert/produtos/busca.asp";
 
@@ -22,18 +22,19 @@ const puppeteer = require('puppeteer');
   await page.waitForNavigation({ waitUntil: 'networkidle0', timeout: 60000 });
   await page.waitForSelector('table');
 
-  // Extract data (example: scraping table rows)
   const results = await page.evaluate(() => {
-    const rows = document.querySelectorAll('table tr'); // Adjust selector for the results table
+    const rows = document.querySelectorAll('table tr');
     return Array.from(rows).map(row => {
-      const cells = row.querySelectorAll('td');
-      return Array.from(cells).map(cell => cell.textContent.trim());
+      const cells = row.querySelectorAll('td.listagem');
+      const content = Array.from(cells).map(cell => cell.textContent.trim());
+      return content;
     });
   });
+  const filteredResult = results.filter((result) => result.length > 0);
 
-  // Output the results
-  console.log('Scraped Results:', results);
-
-  // Close the browser
   await browser.close();
-})();
+
+  return filteredResult;
+};
+
+module.exports = scrapeInmetro;
